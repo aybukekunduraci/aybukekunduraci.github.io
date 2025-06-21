@@ -1,0 +1,185 @@
+/* Basic Reset & Body Styling */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Using Inter font as requested */
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); /* Soft gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    color: #333;
+}
+
+/* Main Container Styling */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center;
+    max-width: 600px; /* Max width for desktop */
+    width: 100%; /* Fluid width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Spacing between sections */
+}
+
+h1 {
+    color: #5b488b; /* Primary accent color */
+    margin-bottom: 25px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Section Styling */
+.section {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05); /* Inner shadow */
+}
+
+/* Mood Buttons Container */
+.mood-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: center;
+    gap: 15px; /* Spacing between buttons */
+    margin-top: 20px;
+}
+
+/* Mood Button Styling */
+.mood-btn {
+    background-color: #8e7bff; /* Button background color */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px; /* Rounded buttons */
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transitions for hover/active states */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Allow buttons to grow and fill space */
+    min-width: 120px; /* Minimum width to prevent squishing */
+    max-width: 180px; /* Max width for consistency */
+}
+
+.mood-btn:hover {
+    background-color: #7b69d8; /* Darker on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.mood-btn:active, .mood-btn.selected {
+    background-color: #6a57c2; /* Even darker/selected state */
+    transform: translateY(0); /* Reset lift on active */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Inset shadow for press effect */
+}
+
+/* Recommendation Display Styling */
+.recommendation-box {
+    background-color: #e0f7fa; /* Light blue background for recommendation */
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 1px solid #b2ebf2; /* Subtle border */
+}
+
+#song-title {
+    color: #00796b; /* Dark teal for song title */
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#motivational-message {
+    color: #4CAF50; /* Green for motivational message */
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* Main Button (e.g., Try Again) */
+.main-btn {
+    background-color: #ff7043; /* Orange accent color */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-btn:hover {
+    background-color: #f4511e; /* Darker orange on hover */
+    transform: translateY(-3px);
+}
+
+.main-btn:active {
+    transform: translateY(0);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Error Message Styling */
+.error-text {
+    color: #e53935; /* Red for error messages */
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+
+/* Utility class for hiding elements */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .mood-btn {
+        padding: 10px 20px;
+        font-size: 1em;
+        flex-basis: 45%; /* Two buttons per row on smaller screens */
+        max-width: none; /* Remove max-width for better filling */
+    }
+
+    .mood-buttons {
+        gap: 10px; /* Reduce gap */
+    }
+
+    #song-title {
+        font-size: 1.5em;
+    }
+
+    #motivational-message {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .mood-btn {
+        flex-basis: 100%; /* Stack buttons vertically on very small screens */
+    }
+}
