@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodify</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Inter for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Moodify</h1>
+
+        <div id="mood-selection" class="section">
+            <p>What's your current mood?</p>
+            <div class="mood-buttons">
+                <button class="mood-btn" data-mood="Happy">Happy</button>
+                <button class="mood-btn" data-mood="Sad">Sad</button>
+                <button class="mood-btn" data-mood="Stressed">Stressed</button>
+                <button class="mood-btn" data-mood="In Love">In Love</button>
+                <button class="mood-btn" data-mood="Lonely">Lonely</button>
+            </div>
+            <p id="error-message" class="error-text"></p>
+        </div>
+
+        <div id="recommendation-display" class="section hidden">
+            <p>Here's a recommendation for your mood:</p>
+            <div class="recommendation-box">
+                <h2 id="song-title"></h2>
+                <p id="motivational-message"></p>
+            </div>
+            <button id="try-again-btn" class="main-btn">Try Another Mood</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
